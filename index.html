@@ -5,127 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.P. Tailoring</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to right, #ffe5ec, #ffe5e5);
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #f8bbd0; /* baby pink */
-            color: white;
-            text-align: center;
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(to right, #ffe5ec, #ffe5e5);
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        background-color: #f8bbd0; /* baby pink */
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 1rem;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    main {
+        flex: 1;
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+        margin: 1rem 0;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+        font-family: 'Georgia', serif;
+        color: #2d2d2d;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        background-color: #e9e9e9;
+        border-radius: 4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    form label {
+        margin-top: 1rem;
+        font-weight: bold;
+    }
+    form input, form button, form textarea {
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    form button {
+        background-color: #2d2d2d;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 0.75rem 1.25rem;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    form button:hover {
+        background-color: #444444;
+    }
+    footer {
+        background-color: #2d2d2d;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: static;
+        width: 100%;
+    }
+    .image-section {
+        text-align: center;
+    }
+    .image-section img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+    }
+    .whatsapp-box {
+        background-color: #25D366;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+    }
+    .whatsapp-box a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Media Queries for Mobile */
+    @media (max-width: 600px) {
+        header, nav ul, main, section, footer {
             padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            flex: 1;
-            padding: 2rem;
+            margin: 0.5rem 0;
         }
         section {
-            padding: 2rem;
-            margin: 1rem 0;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            font-family: 'Georgia', serif;
-            color: #2d2d2d;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            background-color: #e9e9e9;
-            border-radius: 4px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        form label {
-            margin-top: 1rem;
-            font-weight: bold;
-        }
-        form input, form button, form textarea {
-            padding: 0.75rem;
-            margin-top: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        form button {
-            background-color: #2d2d2d;
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 0.75rem 1.25rem;
-            margin-top: 1rem;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        form button:hover {
-            background-color: #444444;
-        }
-        footer {
-            background-color: #2d2d2d;
-            color: white;
-            text-align: center;
             padding: 1rem;
-            position: static;
-            width: 100%;
-        }
-        .image-section {
-            text-align: center;
-        }
-        .image-section img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
         }
         .whatsapp-box {
-            background-color: #25D366;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            font-weight: bold;
+            margin: 1rem 0;
         }
-        .whatsapp-box a {
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
@@ -173,7 +187,7 @@
             <h2>Contact Us</h2>
             <p>Phone: 6380778125</p>
             <div class="whatsapp-box">
-                <p><a href="https://wa.me/qr/NUUK3BJPBQZOO1" target="_blank">WhatsApp</a></p>
+                <p><a href="https://wa.me/qr/3JRUFSGWDZOTL1" target="_blank">WhatsApp</a></p>
             </div>
             <form action="https://formspree.io/f/xqakpdoq" method="POST">
                 <label for="name">Name:</label>
